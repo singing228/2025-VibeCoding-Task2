@@ -1,37 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; max-width: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 1920px; margin: 0 auto; padding: 16px; }
-    nav a { margin-right: 12px; text-decoration: none; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .col-12 { grid-column: span 12; }
-    @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jiang Jiang — 自我介紹</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
-      <a href="#about">關於我</a>
-      <a href="#projects">作品集</a>
-      <a href="https://example.com/blog">技術部落格</a>
-      <a href="mailto:me@example.com">聯絡我</a>
-    </nav>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
-  </header>
+  <main class="card">
+    <header class="hero">
+      <!-- 如果沒有 people.png，瀏覽器會顯示 alt 文字 -->
+      <img src="people.png" alt="Jiang Jiang 照片或插圖" class="avatar" />
+      <div class="name">
+        <h1>Jiang Jiang</h1>
+        <p class="role">產品 / UI•UX 設計師 · 教育科技</p>
+      </div>
+    </header>
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
-  </footer>
+    <section class="intro">
+      <h2>嗨，我是 Jiang Jiang</h2>
+      <p>我專精於把複雜的學習流程變簡單、清晰、有溫度。從教育產品到 AI 功能規劃，我喜歡用使用者觀察與數據，打造能真正幫助老師和學生的體驗。</p>
+    </section>
+
+    <section class="details">
+      <h3>小檔案卡片</h3>
+      <ul>
+        <li><strong>領域：</strong>教育產業、產品設計、AI 功能規劃</li>
+        <li><strong>經驗：</strong>超過 3 年的產品與 UX 設計經驗（包含專案管理）</li>
+        <li><strong>性格：</strong>Enneagram 5（研究者）＋9（和事佬） — 喜歡獨立思考、觀察</li>
+        <li><strong>生活：</strong>有一隻 Maltese 和兩隻貓，喜歡逛小店與咖啡廳</li>
+        <li><strong>旅行：</strong>喜歡自在的歐洲旅行，也常規劃沖繩小旅行</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <p>想看我的作品集或討論合作？歡迎把檔案或需求丟給我，我會以使用者為中心、一步步拆解問題並提出可執行的解法。</p>
+      <div class="meta">
+        <span>✉️ Email: your.email@example.com</span>
+        <span>🔗 Portfolio: <em>（把你的 Framer / 個人頁面網址放這裡）</em></span>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <small>設計範例 • 簡潔 • 可客製化</small>
+    </footer>
+  </main>
 </body>
 </html>
