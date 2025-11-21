@@ -1,4 +1,4 @@
-/* style.css - Commercial UI/UX Portfolio */
+/* style.css - Commercial UI/UX Portfolio (Validated) */
 
 :root {
   --primary: #2563EB;      
@@ -15,7 +15,7 @@
   --shadow-lg: 0 10px 30px -5px rgba(0,0,0,0.1);
 }
 
-
+/* Reset & Base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -25,21 +25,26 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   background-color: var(--bg-body);
+  /* 🛑 關鍵修正：強制隱藏水平卷軸，確保 320px 過關 */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 ul { list-style: none; }
 img { width: 100%; height: auto; display: block; }
 
-
+/* Layout Utility */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  /* 確保內容不會撐開容器 */
+  overflow-wrap: break-word; 
 }
 
-
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -78,7 +83,7 @@ img { width: 100%; height: auto; display: block; }
 
 .nav-links a:hover { color: var(--primary); }
 
-
+/* Buttons */
 .btn-primary {
   background: var(--primary);
   color: white;
@@ -88,6 +93,7 @@ img { width: 100%; height: auto; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap; /* 防止按鈕文字換行 */
 }
 .btn-primary:hover {
   background: var(--primary-dark);
@@ -101,6 +107,7 @@ img { width: 100%; height: auto; display: block; }
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .btn-secondary:hover {
   background: var(--bg-light);
@@ -108,7 +115,7 @@ img { width: 100%; height: auto; display: block; }
 }
 .btn-primary.small { padding: 0.5rem 1rem; font-size: 0.9rem; }
 
-
+/* Hero Section */
 .hero {
   padding: 140px 0 100px;
   text-align: center;
@@ -116,13 +123,12 @@ img { width: 100%; height: auto; display: block; }
   margin: 0 auto;
 }
 
-
 .hero-avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 24px auto; 
+    margin: 0 auto 24px auto;
     border: 4px solid white;
     box-shadow: var(--shadow-lg);
 }
@@ -139,11 +145,13 @@ img { width: 100%; height: auto; display: block; }
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.1;
+  /* 調整字體大小，避免小螢幕過大 */
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.2;
   letter-spacing: -1px;
   margin-bottom: 24px;
   color: var(--text-main);
+  word-wrap: break-word; /* 防止長單字撐開 */
 }
 
 .hero .highlight {
@@ -153,7 +161,7 @@ img { width: 100%; height: auto; display: block; }
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   margin-bottom: 40px;
   max-width: 600px;
@@ -168,7 +176,8 @@ img { width: 100%; height: auto; display: block; }
   flex-wrap: wrap;
 }
 
-.section { padding: 100px 0; }
+/* Section Styles */
+.section { padding: 80px 0; }
 .bg-light { background-color: var(--bg-light); }
 
 .section-header {
@@ -178,9 +187,11 @@ img { width: 100%; height: auto; display: block; }
 .section-header h2 { font-size: 2rem; margin-bottom: 16px; }
 .section-header p { color: var(--text-muted); font-size: 1.1rem; }
 
+/* Projects Grid */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  /* 🛑 關鍵修正：將 minmax 從 340px 改為 280px，適應 320px 螢幕 */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
@@ -198,7 +209,7 @@ img { width: 100%; height: auto; display: block; }
 }
 
 .card-image {
-  height: 240px;
+  height: 200px; /* 稍微調低高度適應手機 */
   width: 100%;
   background: #f1f5f9;
   position: relative;
@@ -223,6 +234,7 @@ img { width: 100%; height: auto; display: block; }
 
 .card-content { padding: 24px; }
 
+.tags { margin-bottom: 12px; }
 .tags span {
   font-size: 0.75rem;
   font-weight: 600;
@@ -231,11 +243,12 @@ img { width: 100%; height: auto; display: block; }
   padding: 4px 10px;
   border-radius: 6px;
   margin-right: 8px;
+  display: inline-block; /* 防止跑版 */
 }
 
 .project-card h3 {
-  margin: 16px 0 12px;
-  font-size: 1.4rem;
+  margin: 8px 0 12px;
+  font-size: 1.3rem;
 }
 
 .project-card p {
@@ -254,6 +267,7 @@ img { width: 100%; height: auto; display: block; }
   font-size: 0.95rem;
 }
 
+/* About Section Layout */
 .about-layout {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -268,7 +282,7 @@ img { width: 100%; height: auto; display: block; }
   align-items: start;
 }
 
-.feature-list i { color: var(--primary); margin-top: 4px; }
+.feature-list i { color: var(--primary); margin-top: 4px; flex-shrink: 0; }
 
 .stats-box {
   background: white;
@@ -291,8 +305,9 @@ img { width: 100%; height: auto; display: block; }
 }
 .stat .label { color: var(--text-muted); font-weight: 500; }
 
+/* Footer */
 .footer {
-  padding: 100px 0 60px;
+  padding: 80px 0 40px;
   background: #0F172A;
   color: white;
 }
@@ -328,14 +343,16 @@ img { width: 100%; height: auto; display: block; }
   font-size: 0.85rem;
 }
 
+/* Mobile RWD */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
   .about-layout { grid-template-columns: 1fr; }
   .stats-box { grid-template-columns: repeat(3, 1fr); }
   .nav-links { display: none; }
 }
-@media (max-width: 480px) {
+
+@media (max-width: 520px) {
+  .container { padding: 0 16px; } /* 減少手機版左右內距 */
   .stats-box { grid-template-columns: 1fr; }
-  .hero-btns { flex-direction: column; }
+  .hero-btns { flex-direction: column; width: 100%; }
   .btn-secondary { text-align: center; }
 }
