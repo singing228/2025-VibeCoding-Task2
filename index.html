@@ -3,47 +3,146 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Jiang Jiang 是一位專精於教育科技的產品與 UI/UX 設計師，擅長將複雜流程簡化並打造有溫度的使用者體驗。查看個人簡介、作品集與聯絡方式。" />
-  <title>Jiang Jiang — 自我介紹</title>
+  
+  <meta name="description" content="Xin Yin Jiang (Jiang Jiang) 是一位專注於教育科技的 UI/UX 產品設計師。擅長透過數據驅動與使用者研究，打造高轉換率的數位產品。" />
+  <title>Xin Yin Jiang | UI/UX Product Designer</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="card">
-    <header class="hero">
-      <img src="https://media.licdn.com/dms/image/v2/D5603AQE_2bJU58Qyvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718312008964?e=1765411200&v=beta&t=iLrz75SO3rNVIOmvf5YiFvDv8vK77b8P0Kd9B3ylTfE" alt="Jiang Jiang 照片" class="avatar" />
-      <div class="name">
-        <h1>Jiang Jiang</h1>
-        <p class="role">產品 / UI•UX 設計師 · 教育科技</p>
-      </div>
-    </header>
 
-    <section class="intro">
-      <h2>嗨，我是 Jiang Jiang</h2>
-      <p>我專精於把複雜的學習流程變簡單、清晰、有溫度。從教育產品到 AI 功能規劃，我喜歡用使用者觀察與數據，打造能真正幫助老師和學生的體驗。</p>
-    </section>
-
-    <section class="details">
-      <h3>小檔案卡片</h3>
-      <ul>
-        <li><strong>領域：</strong>教育產業、產品設計、AI 功能規劃</li>
-        <li><strong>經驗：</strong>超過 3 年的產品與 UX 設計經驗（包含專案管理）</li>
-        <li><strong>性格：</strong>INTJ — 喜歡思考、觀察</li>
-        <li><strong>生活：</strong>有一隻 馬爾濟斯 和兩隻像狗的貓，喜歡逛小店與咖啡廳</li>
-        <li><strong>旅行：</strong>喜歡自在的旅行，也常規劃沖繩小旅行</li>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">Jiang.Design</a>
+      <ul class="nav-links">
+        <li><a href="#work">作品集</a></li>
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#contact" class="btn-primary small">聯絡我</a></li>
       </ul>
-    </section>
+    </div>
+  </nav>
 
-    <section class="cta">
-      <p>想看我的作品集或討論合作？歡迎把檔案或需求丟給我，我會以使用者為中心、一步步拆解問題並提出可執行的解法。</p>
-      <div class="meta">
-        <a href="mailto:your.email@example.com">✉️ Email: your.email@example.com</a>
-        <a href="https://www.linkedin.com/in/xin-yin-jiang-1bbb99189/" target="_blank" rel="noopener">🔗 Portfolio: 作品集連結</a>
+  <header class="hero">
+    <div class="container">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQE_2bJU58Qyvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718312008964?e=1765411200&v=beta&t=iLrz75SO3rNVIOmvf5YiFvDv8vK77b8P0Kd9B3ylTfE" 
+           alt="Xin Yin Jiang" 
+           class="hero-avatar" />
+           
+      <span class="tag">UI/UX • Product Design • EdTech</span>
+      <h1>將複雜的邏輯<br>轉化為<span class="highlight">直覺的體驗</span>。</h1>
+      <p class="subtitle">我是 Xin Yin Jiang，擁有 3 年+ 經驗的產品設計師。專精於教育科技 (EdTech) 與 AI 功能規劃，協助企業打造數據驅動的設計決策。</p>
+      <div class="hero-btns">
+        <a href="#work" class="btn-primary">查看作品集 <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://www.linkedin.com/in/xin-yin-jiang-1bbb99189/" target="_blank" class="btn-secondary">查看 LinkedIn 履歷</a>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <footer class="foot">
-      <small>設計範例 • 簡潔 • 可客製化</small>
-    </footer>
-  </main>
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>精選案例 Case Studies</h2>
+        <p>除了介面美觀，我更在乎設計如何解決商業痛點。</p>
+      </div>
+      
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-image" style="background-color: #E0E7FF;">
+            <img src="project1.png" alt="LMS 系統介面設計" onerror="this.style.display='none'">
+            <div class="placeholder-text">LMS Dashboard UI</div>
+          </div>
+          <div class="card-content">
+            <div class="tags"><span>B2B SaaS</span><span>Data Viz</span></div>
+            <h3>學習管理系統 (LMS) 改版</h3>
+            <p>優化教師評分流程，透過重新設計資訊架構，將操作時間縮短 40%。</p>
+            <a href="#" class="link-text">閱讀案例 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-image" style="background-color: #FCE7F3;">
+            <img src="project2.png" alt="AI 助教功能" onerror="this.style.display='none'">
+            <div class="placeholder-text">AI Feature Concept</div>
+          </div>
+          <div class="card-content">
+            <div class="tags"><span>GenAI</span><span>Mobile App</span></div>
+            <h3>AI 智慧助教功能規劃</h3>
+            <p>整合 LLM 技術於現有 APP 中，設計對話式引導介面，提升學生留存率。</p>
+            <a href="#" class="link-text">閱讀案例 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-image" style="background-color: #DCFCE7;">
+             <img src="project3.png" alt="設計系統建置" onerror="this.style.display='none'">
+             <div class="placeholder-text">Design System</div>
+          </div>
+          <div class="card-content">
+            <div class="tags"><span>Design System</span><span>Figma</span></div>
+            <h3>企業級設計系統建置</h3>
+            <p>從 0 到 1 建立元件庫 (Component Library)，統一跨產品線的視覺語言，提升開發效率。</p>
+            <a href="#" class="link-text">閱讀案例 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section bg-light">
+    <div class="container about-layout">
+      <div class="about-text">
+        <h2>不只是畫圖，<br>更是產品策略夥伴。</h2>
+        <p>作為一名 NTU COOL 的設計師，我習慣在商業目標與使用者需求之間尋找平衡點。我的設計流程包含完整的雙鑽石模型：</p>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-check-circle"></i> <strong>使用者研究：</strong> 訪談、易用性測試、Persona 建構</li>
+          <li><i class="fa-solid fa-check-circle"></i> <strong>介面設計：</strong> Figma 高保真原型、互動設計</li>
+          <li><i class="fa-solid fa-check-circle"></i> <strong>數據驗證：</strong> 定義追蹤指標，根據反饋迭代</li>
+        </ul>
+      </div>
+      <div class="stats-box">
+        <div class="stat">
+          <span class="number">3+</span>
+          <span class="label">Years Exp.</span>
+        </div>
+        <div class="stat">
+          <span class="number">20+</span>
+          <span class="label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="number">100%</span>
+          <span class="label">Dedication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container text-center">
+      <h2>準備好開始下一個專案了嗎？</h2>
+      <p>目前開放 2026 Q1 的專案合作與全職機會。</p>
+      <a href="mailto:your.email@example.com" class="btn-primary big">
+        <i class="fa-regular fa-envelope"></i> 寄信給我
+      </a>
+      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/xin-yin-jiang-1bbb99189/" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#" target="_blank" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+        <a href="#" target="_blank" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 Xin Yin Jiang. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
